@@ -12,3 +12,17 @@ testbed server上的网络桥结构如图所示:
   iptables -t nat -A POSTROUTING -o enp2s0f0 -s 10.250.0.0/24 -j MASQUERADE
   ```
   - 可将enp4s0f0移出br1
+
+> 默认情况fanout交换机会隔离二层，因此需要二层透传。
+
+下边是华为交换机的透传配置
+```
+interface range 25GE 1/0/1 to 25GE 1/0/33
+l2protocol-tunnel lldp lacp enable
+commit
+quit
+
+l2protocol-tunnel lldp group-mac 0100-0001-0022
+l2protocol-tunnel lacp group-mac 0100-0001-0033
+commit
+```
