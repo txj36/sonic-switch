@@ -1,6 +1,6 @@
 # SONiC测试环境网络
 testbed server上的网络桥结构如图所示:
-![](assets/markdown-img-paste-20190331105937113.png)
+![](assets/markdown-img-paste-20190331124843792.png)
 > VM和PTF使用10.250.0.0/24网段，有些测试case需要从PTF直接访问DUT机器，如果PTF与DUT不在同一个管理网段需配置两者的路由或在server上对br1网桥配置SNAT
 
 - SNAT配置
