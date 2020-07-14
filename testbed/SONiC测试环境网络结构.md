@@ -1,6 +1,7 @@
 # SONiC测试环境网络
 testbed server上的网络桥结构如图所示:
 ![](assets/markdown-img-paste-20190331124843792.png)
+
 > VM和PTF使用10.250.0.0/24网段，有些测试case需要从PTF直接访问DUT机器，如果PTF与DUT不在同一个管理网段需配置两者的路由或在server上对br1网桥配置SNAT
 
 - SNAT配置
@@ -25,4 +26,9 @@ quit
 l2protocol-tunnel lldp group-mac 0100-0001-0022
 l2protocol-tunnel lacp group-mac 0100-0001-0033
 commit
+```
+
+> 为实现tag数据包的透传，fanout交换机需要配置QinQ
+```
+port link-type dot1q-tunnel
 ```
