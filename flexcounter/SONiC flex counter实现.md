@@ -1,7 +1,7 @@
 # SONiC flex counter实现
 
 SONiC(201811) FlexCounter消息流如图
-![](assets/markdown-img-paste-20190331003746388.png)
+![](assets/SONiC%20flex%20counter实现.23-54-17.png)
 
 ## 关键表描述
 
