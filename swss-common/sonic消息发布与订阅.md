@@ -2,15 +2,16 @@
 
 ## 概述
 
-SONiC中服务间的通信基于Redis的订阅/发布实现，主要体现在sonic-swss-common中的生产者/消费者表。
+SONiC中服务间的通信基于Redis的发布/订阅实现，主要体现在sonic-swss-common中的生产者/消费者表。
 
 简要的继承关系如图所示。其中生产者表有两种：ProducerTable和ProducerStateTable，相应的消费者为：ConsumerTable和ConsumerStateTable。
 
 此外，消费者中还包括基于Redis键空间的SubscriberStateTable。由于消费者表皆继承了Selectable，因此可通过swss::Select进行事件监听(IO复用)。
 
-下面逐个介绍相关的表。
-
 ![](assets/sonic消息发布与订阅.23-26-21.png)
+
+下面主要介绍生产/消费表。
+
 
 ## ProducerTable与ConsumerTable
 
