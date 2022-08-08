@@ -15,4 +15,4 @@
 - 参考
   - [PAM的原理与应用](https://blog.csdn.net/shenlan211314/article/details/6569592)
   - [深入 Linux PAM 体系结构](https://www.ibm.com/developerworks/cn/linux/l-cn-pam/index.html)
-  - [Linux pam]http://www.linux-pam.org/
+  - [Linux pam](http://www.linux-pam.org/)
