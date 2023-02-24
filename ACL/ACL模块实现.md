@@ -73,4 +73,4 @@ SONiC ACL由AclOrch模块实现，主要类如下：
   - AclTable::add(shared_ptr<AclRule> newRule)
     - 移除已有rule
     - 如有range属性，创建range对象
-    - 创建rule：sai_acl_api->create_acl_entry
+  - 创建rule：sai_acl_api->create_acl_entry
